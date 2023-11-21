@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L37 0L37 37L0 37L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="check">
+    <path d="M0 0L37 0L37 37L0 37L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <path d="M25.3683 11.4931C26.0454 10.8485 27.1116 10.8566 27.7789 11.5114C28.4462 12.1662 28.4744 13.2321 27.8426 13.9212L18.6158 25.4606C18.2952 25.8059 17.8479 26.0059 17.3768 26.0146C16.9058 26.0234 16.4514 25.8401 16.1183 25.5069L9.99938 19.388C9.53537 18.9556 9.34437 18.3045 9.5013 17.69C9.65823 17.0754 10.1381 16.5956 10.7526 16.4387C11.3671 16.2817 12.0183 16.4727 12.4506 16.9367L17.293 21.7768L25.3243 11.544C25.3388 11.5262 25.3542 11.5092 25.3706 11.4931L25.3683 11.4931Z" id="Shape" fill="#FFFFFF" stroke="none" />
+  </g>
+</svg>
