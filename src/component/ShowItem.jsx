@@ -3,8 +3,10 @@ import checklist from "../assets/check.svg";
 import write from "../assets/write.svg";
 import trash from "../assets/trash3.svg";
 import Button from "./Button";
+import { ACTIONTYPE, useDispatcList } from "./ListProvider";
 
-function ShowItem({ item, onDelete, onChecklist, onEdit }) {
+function ShowItem({ item, onTriggerAlertDelete, onTriggerChange }) {
+  const dispatch = useDispatcList();
   return (
     <>
       {item.isDone && (
@@ -18,7 +20,10 @@ function ShowItem({ item, onDelete, onChecklist, onEdit }) {
         </p>
       )}
       <div className="flex gap-4">
-        <Button classname="bg-red" onClick={() => onDelete(item.id)}>
+        <Button
+          classname="bg-red"
+          onClick={() => onTriggerAlertDelete(item.id)}
+        >
           <img src={trash} alt="trash" className=" w-5 md:w-7" />
         </Button>
         <Button
@@ -28,13 +33,18 @@ function ShowItem({ item, onDelete, onChecklist, onEdit }) {
               : " bg-blue cursor-pointer"
           }
           disabled={item.isDone ? true : false}
-          onClick={onEdit}
+          onClick={onTriggerChange}
         >
           <img src={write} alt="write" className=" w-5 md:w-7" />
         </Button>
         <Button
           classname={item.isDone ? "bg-red" : "bg-secondary"}
-          onClick={() => onChecklist(item.id)}
+          onClick={() =>
+            dispatch({
+              type: ACTIONTYPE.CHECKLIST,
+              id: item.id,
+            })
+          }
         >
           <img
             src={item.isDone ? x : checklist}
